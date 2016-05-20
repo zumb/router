@@ -1,0 +1,4 @@
+suites:
+    dein_suite:
+        namespace: Zumb\Routing
+        psr4_prefix: Zumb\Routing
