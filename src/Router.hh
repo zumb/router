@@ -14,7 +14,7 @@ class Router
   public function load(string $uri):void
   {
     $matches = [];
-    if(preg_match_all(self::RESOURCE_PATTERN, $uri, $matches) == 2) {
+    if(preg_match_all(self::RESOURCE_PATTERN, $uri, $matches)) {
       $this->segments = array_map($segment ==> ucfirst($segment), $matches[1]);
       $this->target = implode("\\", $this->segments);
       $this->parameters = array_filter($matches[2]);
